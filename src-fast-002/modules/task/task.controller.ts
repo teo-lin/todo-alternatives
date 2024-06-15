@@ -58,11 +58,11 @@ class TaskController {
 }
 
 async function taskRouter(fastify: FastifyInstance) {
-  fastify.post('/create', TaskController.createTask);
-  fastify.get('/task/:id', TaskController.retrieveTask);
-  fastify.put('/task/:id', TaskController.updateTask);
-  fastify.delete('/task/:id', TaskController.deleteTask);
-  fastify.patch('/task/:id/complete', TaskController.completeTask);
+  fastify.post('/tasks/create', TaskController.createTask);
+  fastify.get('/tasks/task/:id', TaskController.retrieveTask);
+  fastify.put('/tasks/task/:id', TaskController.updateTask);
+  fastify.delete('/tasks/task/:id', TaskController.deleteTask);
+  fastify.patch('/tasks/task/:id/complete', TaskController.completeTask);
 }
 
 export default taskRouter;

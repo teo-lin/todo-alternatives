@@ -47,10 +47,10 @@ class ListController {
 }
 
 async function listRouter(fastify: FastifyInstance) {
-  fastify.post('/create', ListController.createList);
-  fastify.get('/list/:id', ListController.retrieveList);
-  fastify.put('/list/:id', ListController.updateList);
-  fastify.delete('/list/:id', ListController.deleteList);
+  fastify.post('/lists/create', ListController.createList);
+  fastify.get('/lists/list/:id', ListController.retrieveList);
+  fastify.put('/lists/list/:id', ListController.updateList);
+  fastify.delete('/lists/list/:id', ListController.deleteList);
 }
 
 export default listRouter;

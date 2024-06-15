@@ -47,10 +47,10 @@ class UserController {
 }
 
 async function userRouter(fastify: FastifyInstance) {
-  fastify.post('/register', UserController.createUser);
-  fastify.get('/user/:id', UserController.retrieveUser);
-  fastify.put('/user/:id', UserController.updateUser);
-  fastify.delete('/user/:id', UserController.deleteUser);
+  fastify.post('/users/register', UserController.createUser);
+  fastify.get('/users/user/:id', UserController.retrieveUser);
+  fastify.put('/users/user/:id', UserController.updateUser);
+  fastify.delete('/users/user/:id', UserController.deleteUser);
 }
 
 export default userRouter;
