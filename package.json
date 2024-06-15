@@ -13,7 +13,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/teo-lin/todo-express"
+    "url": "https://github.com/teo-lin/todo-alternatives"
   },
   "config": {
     "port": "3000",
@@ -38,7 +38,6 @@
     "start:koa:001": "nodemon src-koa-001/app.js",
     "start:koa:002": "nodemon src-koa-002/app.ts",
     "start:koa:003": "nodemon src-koa-003/app.ts",
-    "start:debug": "nodemon --exec 'node --inspect -r ts-node/register' src/app.ts",
     "test": "",
     "test:watch": "",
     "test:cov": "",
