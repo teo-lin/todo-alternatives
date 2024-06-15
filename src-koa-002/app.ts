@@ -18,6 +18,10 @@ app.use(bodyParser());
 app.use(userRouter.routes());
 app.use(taskRouter.routes());
 app.use(listRouter.routes());
+app.use(async (ctx, next) => {
+  if (ctx.path === '/api') ctx.body = 'Hello World!';
+  else await next();
+});
 
 // SERVER
 const PORT = 3000;

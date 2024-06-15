@@ -253,6 +253,7 @@ router.post('/lists/create', createList);
 router.get('/lists/list/:id', retrieveList);
 router.put('/lists/list/:id', updateList);
 router.delete('/lists/list/:id', deleteList);
+router.get('/', (req, res) => res.send('Hello World!'));
 
 // SERVER
 const PORT = 3000;

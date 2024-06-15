@@ -1,12 +1,12 @@
 import Router from '@koa/router';
 import { Context } from 'koa';
 import UserService from './user.service';
-import { User, NewUser } from '../interfaces';
+import { MaskedUser, NewUser, User } from '../interfaces';
 
 class UserController {
-  static async createUser(ctx: Context) {
+  static createUser(ctx: Context): void {
     try {
-      const user: User = await UserService.createUser(ctx.request.body as NewUser);
+      const user: MaskedUser = UserService.createUser(ctx.request.body as NewUser);
       ctx.status = 201;
       ctx.body = user;
     } catch (error: any) {
@@ -15,9 +15,9 @@ class UserController {
     }
   }
 
-  static async retrieveUser(ctx: Context) {
+  static retrieveUser(ctx: Context): void {
     try {
-      const user: User = await UserService.retrieveUser(ctx.params.id);
+      const user: MaskedUser = UserService.retrieveUser(ctx.params.id);
       ctx.body = user;
     } catch (error: any) {
       if (error.message === 'Not Found') {
@@ -30,9 +30,9 @@ class UserController {
     }
   }
 
-  static async updateUser(ctx: Context) {
+  static updateUser(ctx: Context): void {
     try {
-      const user: User = await UserService.updateUser(
+      const user: MaskedUser = UserService.updateUser(
         ctx.params.id,
         ctx.request.body as Partial<User>
       );
@@ -48,9 +48,9 @@ class UserController {
     }
   }
 
-  static async deleteUser(ctx: Context) {
+  static deleteUser(ctx: Context): void {
     try {
-      await UserService.deleteUser(ctx.params.id);
+      UserService.deleteUser(ctx.params.id);
       ctx.body = { message: 'User deleted successfully' };
     } catch (error: any) {
       if (error.message === 'Not Found') {

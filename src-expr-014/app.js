@@ -15,6 +15,7 @@ app.use(express.json());
 app.use('/api/users', usersRouter);
 app.use('/api/tasks', tasksRouter);
 app.use('/api/lists', listsRouter);
+router.get('/', (req, res) => res.send('Hello World!'));
 
 // SERVER
 const PORT = 3000;

@@ -4,9 +4,9 @@ import ListService from './list.service';
 import { List, NewList } from '../interfaces';
 
 class ListController {
-  static async createList(ctx: Context) {
+  static createList(ctx: Context): void {
     try {
-      const list: List = await ListService.createList(ctx.request.body as NewList);
+      const list: List = ListService.createList(ctx.request.body as NewList);
       ctx.status = 201;
       ctx.body = list;
     } catch (error: any) {
@@ -15,9 +15,9 @@ class ListController {
     }
   }
 
-  static async retrieveList(ctx: Context) {
+  static retrieveList(ctx: Context): void {
     try {
-      const list: List = await ListService.retrieveList(ctx.params.id);
+      const list: List = ListService.retrieveList(ctx.params.id);
       ctx.body = list;
     } catch (error: any) {
       if (error.message === 'Not Found') {
@@ -30,12 +30,9 @@ class ListController {
     }
   }
 
-  static async updateList(ctx: Context) {
+  static updateList(ctx: Context): void {
     try {
-      const list: List = await ListService.updateList(
-        ctx.params.id,
-        ctx.request.body as Partial<List>
-      );
+      const list: List = ListService.updateList(ctx.params.id, ctx.request.body as Partial<List>);
       ctx.body = list;
     } catch (error: any) {
       if (error.message === 'Not Found') {
@@ -48,9 +45,9 @@ class ListController {
     }
   }
 
-  static async deleteList(ctx: Context) {
+  static deleteList(ctx: Context): void {
     try {
-      await ListService.deleteList(ctx.params.id);
+      ListService.deleteList(ctx.params.id);
       ctx.body = { message: 'List deleted successfully' };
     } catch (error: any) {
       if (error.message === 'Not Found') {

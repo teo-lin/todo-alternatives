@@ -229,6 +229,7 @@ router.post('/lists/create', ListController.createList);
 router.get('/lists/list/:id', ListController.retrieveList);
 router.put('/lists/list/:id', ListController.updateList);
 router.delete('/lists/list/:id', ListController.deleteList);
+router.get('/', (req, res) => res.send('Hello World!'));
 
 // SERVER
 const PORT = 3000;
