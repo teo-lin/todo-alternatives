@@ -36,6 +36,10 @@
     "start:fast:001": "nodemon src-fast-001/app.js",
     "start:fast:002": "nodemon src-fast-002/app.ts",
     "start:fast:003": "nodemon src-fast-003/app.ts",
+    "start:koa:000": "nodemon src-koa-000/app.js",
+    "start:koa:001": "nodemon src-koa-001/app.js",
+    "start:koa:002": "nodemon src-koa-002/app.ts",
+    "start:koa:003": "nodemon src-koa-003/app.ts",
     "start:debug": "nodemon --exec 'node --inspect -r ts-node/register' src/app.ts",
     "test": "",
     "test:watch": "",
@@ -55,11 +59,18 @@
     "reset": "open --background -a Docker && rm -rf node_modules build dist out coverage package-lock.json && docker stop todo-container && docker rm todo-container || true && docker rmi todo-app || true"
   },
   "dependencies": {
+    "@koa/bodyparser": "^5.1.1",
+    "@koa/router": "^12.0.1",
+    "@types/koa": "^2.15.0",
     "express": "^4.19.2",
-    "fastify": "^4.27.0"
+    "fastify": "^4.27.0",
+    "koa": "^2.15.3",
+    "koa-bodyparser": "^4.4.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/koa-router": "^7.4.8",
     "ts-node": "^10.9.2"
   }
 }

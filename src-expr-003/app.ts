@@ -181,7 +181,7 @@ class UserService {
     return maskedUser;
   }
 
-  static retrieveUser(userId: string): MaskedUser | undefined {
+  static retrieveUser(userId: string): MaskedUser {
     const data: Database = DatabaseService.getData();
     const user: User | undefined = data.users.find((user: User) => user.userId === userId);
 
@@ -227,7 +227,7 @@ class TaskService {
     return task;
   }
 
-  static retrieveTask(taskId: string): Task | undefined {
+  static retrieveTask(taskId: string): Task {
     const data: Database = DatabaseService.getData();
 
     const task: Task | undefined = data.tasks.find((task: Task) => task.taskId === taskId);
@@ -281,7 +281,7 @@ class ListService {
     return list;
   }
 
-  static retrieveList(listId: string): List | undefined {
+  static retrieveList(listId: string): List {
     const data: Database = DatabaseService.getData();
 
     const list: List | undefined = data.lists.find((list: List) => list.listId === listId);
