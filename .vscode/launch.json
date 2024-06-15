@@ -39,7 +39,7 @@
       "request": "launch",
       "name": "nodemon:002",
       "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v20.14.0/bin/nodemon",
-      "program": "${workspaceFolder}/src-002/app.js",
+      "program": "${workspaceFolder}/src-expr-002/app.js",
       "restart": true,
       "console": "integratedTerminal",
       "env": {
@@ -51,7 +51,7 @@
       "request": "launch",
       "name": "nodemon:003",
       "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v20.14.0/bin/nodemon",
-      "program": "${workspaceFolder}/src-003/app.js",
+      "program": "${workspaceFolder}/src-expr-003/app.js",
       "restart": true,
       "console": "integratedTerminal",
       "env": {

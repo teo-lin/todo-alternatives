@@ -17,21 +17,21 @@
   },
   "config": {
     "port": "3000",
-    "framework": "express"
+    "framework": "multi-framework"
   },
   "scripts": {
     "dev": "nodemon src/app.ts",
     "start": "node src/app.js",
-    "start:000": "nodemon src-000/app.js",
-    "start:001": "nodemon src-001/app.js",
-    "start:002": "nodemon src-002/app.ts",
-    "start:003": "nodemon src-003/app.ts",
-    "start:004": "nodemon src-004/app.js",
-    "start:005": "nodemon src-005/app.js",
-    "start:006": "nodemon src-006/app.js",
-    "start:007": "nodemon src-007/app.js",
-    "start:008": "nodemon src-008/app.js",
-    "start:009": "nodemon src-009/app.ts",
+    "start:000": "nodemon src-expr-000/app.js",
+    "start:001": "nodemon src-expr-001/app.js",
+    "start:002": "nodemon src-expr-002/app.ts",
+    "start:003": "nodemon src-expr-003/app.ts",
+    "start:004": "nodemon src-expr-004/app.js",
+    "start:005": "nodemon src-expr-005/app.js",
+    "start:006": "nodemon src-expr-006/app.js",
+    "start:007": "nodemon src-expr-007/app.js",
+    "start:008": "nodemon src-expr-008/app.js",
+    "start:009": "nodemon src-expr-009/app.ts",
     "start:debug": "nodemon --exec 'node --inspect -r ts-node/register' src/app.ts",
     "test": "",
     "test:watch": "",
@@ -51,7 +51,8 @@
     "reset": "open --background -a Docker && rm -rf node_modules build dist out coverage package-lock.json && docker stop todo-container && docker rm todo-container || true && docker rmi todo-app || true"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "fastify": "^4.27.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
