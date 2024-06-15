@@ -20,8 +20,6 @@
     "framework": "multi-framework"
   },
   "scripts": {
-    "dev": "nodemon src/app.ts",
-    "start": "node src/app.js",
     "start:000": "nodemon src-expr-000/app.js",
     "start:001": "nodemon src-expr-001/app.js",
     "start:002": "nodemon src-expr-002/app.ts",
@@ -71,7 +69,6 @@
     "@types/express": "^4.17.21",
     "@types/koa__router": "^12.0.4",
     "@types/koa-bodyparser": "^4.3.12",
-    "@types/koa-router": "^7.4.8",
     "ts-node": "^10.9.2"
   }
 }
