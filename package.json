@@ -20,6 +20,7 @@
     "framework": "multi-framework"
   },
   "scripts": {
+    "start:vanilla:001": "nodemon src-001/app.js",
     "start:000": "nodemon src-expr-000/app.js",
     "start:001": "nodemon src-expr-001/app.js",
     "start:002": "nodemon src-expr-002/app.ts",

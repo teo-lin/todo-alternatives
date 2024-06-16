@@ -23,4 +23,10 @@ router.get('/', (req, res) => res.send('Hello World!'));
 
 // SERVER
 const PORT = 3000;
-app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
+const startTime = new Date();
+app.listen(PORT, () => {
+  const endTime = new Date();
+  const startupTime = endTime - startTime;
+  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server started in ${startupTime} ms`);
+});
